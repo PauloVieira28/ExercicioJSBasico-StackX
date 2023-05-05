@@ -8,9 +8,8 @@
  */
 function soma(a, b) {
   // @todo implementar retorno da operação aqui
-  (test('Retorna a soma entre 1337 e 3301', () => {
-    expect(soma(1337, 3301)).toBe(4638);
-  }));
+  return a + b;
+ 
 }
 
 /**
@@ -21,9 +20,8 @@ function soma(a, b) {
  */
 function multiplicacao(a, b) {
   // @todo implementar retorno da operação aqui
-  test('Retorna multiplicação entre 3 e 11', () => {
-    expect(multiplicacao(3, 11)).toBe(33);
-  });
+  return a * b;
+
 }
 
 /**
@@ -34,9 +32,7 @@ function multiplicacao(a, b) {
  */
 function divisao(a, b) {
   // @todo implementar retorno da operação aqui
-  test('Retorna a divisão entre 10 e 2', () => {
-    expect(divisao(10, 2)).toBe(5);
-  });
+  return a / b;
 }
 
 /**
@@ -47,9 +43,7 @@ function divisao(a, b) {
  */
 function subtracao(a, b) {
   // @todo implementar retorno da operação aqui
-  test('Retorna subtração entre 3301 e 1337', () => {
-    expect(subtracao(3301, 1337)).toBe(1964);
-  });
+  return a - b;
 }
 
 /**
@@ -60,9 +54,7 @@ function subtracao(a, b) {
  */
 function modulo(a, b) {
   // @todo implementar retorno da operação aqui
-  test('Retorna resto da divisão de 15 por 4', () => {
-    expect(modulo(15, 4)).toBe(3);
-  });
+  return a % b;
 }
 
 /**
@@ -73,9 +65,13 @@ function modulo(a, b) {
  */
 function max(a, b) {
   // @todo implementar retorno da operação aqui
-  test('Retorna o maior número entre 13 e 33', () => {
-    expect(max(13, 33)).toBe(33);
-  });
+  if (a > b){
+    return a;
+
+  }
+  else {
+    return b;
+  }
 }
 
 // -------------------------------------
@@ -88,9 +84,7 @@ function max(a, b) {
  */
 function strConcat(a, b) {
   // @todo implementar retorno da operação aqui
-  test('Retorna as strings "Hello" e "World" com template string"', () => {
-    expect(strConcat('Hello', 'World')).toBe('Hello World');
-  });
+  return  a + " " + b
 }
 
 // --------------------------------------
@@ -106,16 +100,15 @@ function strConcat(a, b) {
  */
 function retornaNumero(numero) {
   // @todo implementar retorno da operação aqui
-  test('Retorna "Maior que 10" quando o número é maior que 10', () => {
-    expect(retornaNumero(15)).toBe('Maior que 10');
-  });
-  test('Retorna "Igual a 10" quando o número é igual a 10', () => {
-    expect(retornaNumero(10)).toBe('Igual a 10');
-  });
-  
-  test('Retorna "Menor que 10" quando o número é menor que 10', () => {
-    expect(retornaNumero(5)).toBe('Menor que 10');
-  });
+  if (numero > 10){
+    return "Maior que 10";
+  }
+  else if (numero == 10){
+    return "Igual a 10";
+  }
+  else {
+    return "Menor que 10";
+  }
 }
 
 // --------------------------------------
@@ -127,11 +120,12 @@ function retornaNumero(numero) {
  */
 function ehPositivo(num) {
   // @todo implementar retorno da operação aqui
-  test('Retorna true para números positivos', () => {
-    expect(ehPositivo(5)).toBe(true);
-    expect(ehPositivo(0)).toBe(false);
-    expect(ehPositivo(-5)).toBe(false);
-  });
+  if (num > 0){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 module.exports = 
